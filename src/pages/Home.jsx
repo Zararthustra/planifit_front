@@ -1,3 +1,4 @@
+import { CoachFilter } from "../components/CoachFilter";
 import { Navbar } from "../components/Navbar";
 import { Searchbar } from "../components/Searchbar";
 import "../styles/Home.css";
@@ -50,15 +51,16 @@ export const Home = () => {
       >
         <span>
           <i>
-            Prenez <strong>rendez-vous</strong> avec un{" "}
-            <strong>coach sportif</strong>{" "}
+            Prenez<strong> rendez-vous</strong> avec un
+            <strong> coach sportif</strong>
           </i>
-        </span>
+        </span>{" "}
         <span>
           <i>en un battement de jambe !</i>
         </span>
       </p>
       <Searchbar />
+      <CoachFilter />
     </main>
   );
 };
