@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&family=Faster+One&display=swap");
+
+@media (max-width: 800px) {
+  .homePage input[type="text"] {
+    width: 20rem !important;
+  }
+}
+
+:root {
+  --light-text: #d9d9d9;
+  --dark-text: #4B4B4B;
+
+  --primary: #c872d6;
+  --secondary: #7ee5c0;
+
+  --primary-faded: #f5f4f5;
+  --secondary-faded: #e9ebea;
+
+  --red: #e66c6c;
+  --green: #1dc601;
+
+  --text: "Electrolize", sans-serif;
+  --title: "Faster One", cursive;
+
+  font-family: var(--text);
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--primary-faded);
+}
+
+h1 {
+  font-family: var(--title);
+}
+
+li {
+  list-style: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f9b33f95;
+}
+
+::selection {
+  background-color: var(--primary);
+  color: white;
+}
+
+/*------------------------------------*/
+
+.primaryButton {
+  margin-top: 2rem;
+  padding: 0 2rem;
+  width: fit-content;
+  height: 3rem;
+  background-color: var(--secondary);
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  color: white;
+  font-family: var(--text-font);
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: all 0.5s;
+}
+
+.primaryButton:hover {
+  background-color: #9d10b3;
+}
+
+.secondaryButton {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border: none;
+  color: var(--secondary);
+  font-family: var(--text-font);
+  font-size: 1.2rem;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.secondaryButton:hover {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.secondaryButton:hover svg {
+  stroke: var(--secondary);
+}
+
+/*------------------------------------*/
+
+.homeButton {
+  position: fixed;
+  left: 2rem;
+  top: 1rem;
+  cursor: pointer;
+  fill: var(--secondary);
+  z-index: 1;
+}
+
+.homeButton:hover {
+  fill: #9d10b3;
+}
+
+.logoutButton {
+  position: fixed;
+  right: 2rem;
+  top: 1rem;
+  cursor: pointer;
+  fill: var(--red);
+  z-index: 1;
+}
+
+.logoutButton:hover {
+  fill: red;
+}
+
+.recButton {
+  position: fixed;
+  right: 5rem;
+  top: 1rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.recButton:hover {
+  stroke: var(--secondary);
+}
+
+/*------------------------------------*/
+/*
+ * Loader
+**/
+
+/* arrow */
+.loader path:first-child {
+  fill: var(--primary);
+  transform-origin: 50%;
+  left: 1rem;
+  top: 0;
+  animation: 2s ease-in-out arrow infinite;
+}
+
+/* lines */
+.loader path:last-child {
+  left: 0;
+  top: 0;
+  fill: var(--primary);
+  animation: 2s ease-in-out lines infinite;
+}
+
+@keyframes arrow {
+  0% {
+    transform: rotate(0);
+    fill: var(--primary);
+  }
+
+  50% {
+    fill: var(--secondary);
+  }
+
+  100% {
+    transform: rotate(-1080deg);
+    fill: var(--primary);
+  }
+}
+
+@keyframes lines {
+  0% {
+    fill: var(--primary);
+    transform: translateX(0);
+  }
+
+  50% {
+    fill: var(--secondary);
+    transform: translateX(-100%);
+  }
+
+  100% {
+    fill: var(--primary);
+    transform: translateX(0);
+  }
+}
+
+/*------------------------------------*/
+
+/* 404
+.notFound {
+}
+*/
+
+/*------------------------------------*/
+
+/* 
+ * Create a custom checkbox
+ */
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.check {
+  display: flex;
+  height: 1.2em;
+  width: 1.2em;
+  background: #fff;
+  border-radius: 4px;
+  border: 1px var(--primary) solid;
+}
+
+.check--active {
+  background: var(--primary);
+}
+
+/*------------------------------------*/
+
+/* .toaster {
+  animation: 7s ease-in-out dropDownToaster;
+}
+
+@keyframes dropDownToaster {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  7% {
+    transform: translateY(10%);
+  }
+
+  12% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+} */
