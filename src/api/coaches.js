@@ -1,0 +1,81 @@
+export const coaches = [
+  {
+    id: 1,
+    name: "Manon",
+    image: "manon.jpg",
+    location: "Metz",
+    activities: ["Boxe", "LesMils", "Crossfit"],
+    sessionTypes: ["Individuel", "Collectif"],
+    socialNetworks: {
+      facebook: "https://fb.com",
+      instagram: "https://insta.com",
+    },
+    description:
+      "Salut, moi c’est Manon ! Je pratique la boxe en compétition depuis maintenant 12 ans. Passionée par le sport et le dépassement de soi, je propose mes services.",
+  },
+  {
+    id: 2,
+    name: "Pierre",
+    image: "pierre.jpg",
+    location: "Metz",
+    activities: ["Course à pied", "Cardio"],
+    sessionTypes: ["Individuel"],
+    socialNetworks: {
+      facebook: "https://fb.com",
+      instagram: "https://insta.com",
+    },
+    description: "Salut, moi c’est Pierre !",
+  },
+  {
+    id: 3,
+    name: "Bertrand",
+    image: "bertrand.jpg",
+    location: "Thionville",
+    activities: ["Zumba", "Aqua bike"],
+    sessionTypes: ["Visio"],
+    socialNetworks: {
+      facebook: "https://fb.com",
+      instagram: "https://insta.com",
+    },
+    description: "Salut, moi c’est Bertrand !",
+  },
+  {
+    id: 4,
+    name: "Julie",
+    image: "julie.jpg",
+    location: "Montigny-les-Metz",
+    activities: ["Zumba"],
+    sessionTypes: ["Visio"],
+    socialNetworks: {
+      facebook: "https://fb.com",
+      instagram: "https://insta.com",
+    },
+    description: "Salut, moi c’est Julie !",
+  },
+  {
+    id: 5,
+    name: "Robin",
+    image: "robin.jpg",
+    location: "Metz",
+    activities: ["Musculation"],
+    sessionTypes: ["Individuel", "Visio"],
+    socialNetworks: {
+      facebook: "https://fb.com",
+      instagram: "https://insta.com",
+    },
+    description: "Salut, moi c’est Robin !",
+  },
+  {
+    id: 6,
+    name: "Marco",
+    image: "marco.jpg",
+    location: "Metz",
+    activities: ["Pilate", "Escalade"],
+    sessionTypes: ["Collectif"],
+    socialNetworks: {
+      facebook: "https://fb.com",
+      instagram: "https://insta.com",
+    },
+    description: "Salut, moi c’est Marco !",
+  },
+];

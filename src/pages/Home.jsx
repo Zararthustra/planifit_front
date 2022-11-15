@@ -1,3 +1,5 @@
+import { coaches } from "../api/coaches";
+import { CoachCard } from "../components/CoachCard";
 import { CoachFilter } from "../components/CoachFilter";
 import { Navbar } from "../components/Navbar";
 import { Searchbar } from "../components/Searchbar";
@@ -61,6 +63,19 @@ export const Home = () => {
       </p>
       <Searchbar />
       <CoachFilter />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "2rem",
+          flexWrap: "wrap",
+        }}
+      >
+        {coaches.map((item, index) => {
+          return <CoachCard coach={item} key={index} />;
+        })}
+      </div>
     </main>
   );
 };

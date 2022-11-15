@@ -34,7 +34,7 @@ export const CoachFilter = () => {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        gap: "7rem",
+        gap: "3rem",
         margin: "5rem 0",
         backgroundColor: "var(--secondary-faded)",
         padding: "5rem 0",
@@ -46,7 +46,7 @@ export const CoachFilter = () => {
           margin: "0",
         }}
       >
-        Filtrer les coachs par :
+        Filtrer par :
       </h2>
       <div
         style={{
@@ -55,7 +55,7 @@ export const CoachFilter = () => {
           alignItems: "center",
           flexDirection: "column",
           color: "var(--dark-text)",
-          gap: "1rem"
+          gap: "1rem",
         }}
       >
         <h3>Genre</h3>
@@ -86,7 +86,7 @@ export const CoachFilter = () => {
           alignItems: "center",
           flexDirection: "column",
           color: "var(--dark-text)",
-          gap: "1rem"
+          gap: "1rem",
         }}
       >
         <h3>Type de séance</h3>
@@ -117,7 +117,7 @@ export const CoachFilter = () => {
           alignItems: "center",
           flexDirection: "column",
           color: "var(--dark-text)",
-          gap: "1rem"
+          gap: "1rem",
         }}
       >
         <h3>Activité</h3>
