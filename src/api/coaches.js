@@ -1,6 +1,7 @@
 export const coaches = [
   {
     id: 1,
+    gender: "Femme",
     name: "Manon",
     image: "manon.jpg",
     location: "Metz",
@@ -15,6 +16,7 @@ export const coaches = [
   },
   {
     id: 2,
+    gender: "Homme",
     name: "Pierre",
     image: "pierre.jpg",
     location: "Metz",
@@ -28,6 +30,7 @@ export const coaches = [
   },
   {
     id: 3,
+    gender: "Homme",
     name: "Bertrand",
     image: "bertrand.jpg",
     location: "Thionville",
@@ -41,11 +44,12 @@ export const coaches = [
   },
   {
     id: 4,
+    gender: "Femme",
     name: "Julie",
     image: "julie.jpg",
     location: "Montigny-les-Metz",
     activities: ["Zumba"],
-    sessionTypes: ["Visio"],
+    sessionTypes: ["Visio", "Collectif"],
     socialNetworks: {
       facebook: "https://fb.com",
       instagram: "https://insta.com",
@@ -54,6 +58,7 @@ export const coaches = [
   },
   {
     id: 5,
+    gender: "Homme",
     name: "Robin",
     image: "robin.jpg",
     location: "Metz",
@@ -67,6 +72,7 @@ export const coaches = [
   },
   {
     id: 6,
+    gender: "Homme",
     name: "Marco",
     image: "marco.jpg",
     location: "Metz",

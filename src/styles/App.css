@@ -67,49 +67,54 @@ li {
 }
 
 /*------------------------------------*/
-
-.primaryButton {
-  padding: 0 2rem;
-  width: fit-content;
-  height: 3rem;
-  background-color: var(--primary);
-  outline: none;
-  border: none;
-  font-size: 1.2rem;
-  border-radius: 5px;
-  color: white;
-  font-family: var(--text-font);
-  font-weight: 600;
-  cursor: pointer;
-  letter-spacing: 2px;
-  transition: all 0.5s;
-}
-
-.primaryButton:hover {
-  background-color: #9d10b3;
-}
-
+/* 
+** Buttons
+**/
+.primaryButton,
 .secondaryButton {
-  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  border: none;
-  color: var(--secondary);
-  font-family: var(--text-font);
-  font-size: 1.2rem;
+  padding: .5rem 2rem;
   cursor: pointer;
-  letter-spacing: 2px;
-}
-
-.secondaryButton:hover {
   font-weight: 600;
-  text-decoration: underline;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  transition: all 0.5s;
+  font-family: var(--text-font);
+  outline: none;
+  border: 2px solid var(--primary);
 }
 
+.primaryButton {
+  background-color: var(--primary);
+  color: white;
+}
+.primaryButton:hover {
+  background-color: #a13ab1;
+  border: 2px solid transparent;
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color: var(--primary);
+}
+.secondaryButton:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.primaryButton svg {
+  stroke: white;
+}
+.secondaryButton svg {
+  stroke: var(--primary);
+  transition: all 0.5s;
+}
 .secondaryButton:hover svg {
-  stroke: var(--secondary);
+  stroke: white;
 }
 
 /*------------------------------------*/

@@ -2,11 +2,13 @@ import { useState } from "react";
 import { activities as truc } from "../api/activities";
 import { Checkbox } from "./Checkbox";
 import { SelectCard } from "./SelectCard";
+import { SVGFilter } from "../svg/SVGFilter";
+import { SVGReset } from "../svg/SVGReset";
 
-export const CoachFilter = () => {
+export const CoachFilter = ({ coaches, setFilteredCoaches }) => {
   //___________________________________________________ Variables
 
-  const genders = ["Homme", "Femme", "Peu importe"];
+  const genders = ["Homme", "Femme"];
   const [genderSelected, setGenderSelected] = useState(null);
 
   const sessionTypes = ["Individuel", "Collectif", "Visio"];
@@ -22,6 +24,24 @@ export const CoachFilter = () => {
   );
 
   //___________________________________________________ Functions
+
+  const filterCoaches = () => {
+    if (genderSelected || sessionTypeSelected)
+      return setFilteredCoaches(
+        coaches.filter((item) => {
+          if (genderSelected && sessionTypeSelected)
+            return (
+              item.gender === genderSelected &&
+              item.sessionTypes.includes(sessionTypeSelected)
+            );
+          return (
+            item.gender === genderSelected ||
+            item.sessionTypes.includes(sessionTypeSelected)
+          );
+        })
+      );
+    return setFilteredCoaches(coaches);
+  };
 
   //___________________________________________________ Render
 
@@ -46,7 +66,7 @@ export const CoachFilter = () => {
           margin: "0",
         }}
       >
-        Filtrer par :
+        Filtres
       </h2>
       <div
         style={{
@@ -143,6 +163,43 @@ export const CoachFilter = () => {
             );
           })}
         </div>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          gap: "1rem",
+          margin: "3rem 0",
+        }}
+      >
+        <button className="primaryButton" style={{}} onClick={filterCoaches}>
+          <SVGFilter />
+          Filtrer
+        </button>
+        <button
+          className="secondaryButton"
+          style={{
+            border: "none",
+          }}
+          onClick={() => {
+            setGenderSelected(null);
+            setSessionTypeSelected(null);
+            setActivities(
+              truc.map((item) => {
+                return {
+                  activity: item,
+                  isSelected: false,
+                };
+              })
+            );
+            setFilteredCoaches(coaches);
+          }}
+        >
+          <SVGReset />
+          Réinitialiser
+        </button>
       </div>
     </div>
   );

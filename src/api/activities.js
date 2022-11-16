@@ -5,7 +5,7 @@ export const activities = [
   "Tennis",
   "Boxe",
   "Lesmils",
-  "Pilate",
+  "Pilates",
   "Zumba",
   "Crossfit",
   "Aqua bike",
