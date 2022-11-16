@@ -10,8 +10,9 @@ import { SVGPlaniFitTitle } from "../svg/SVGPlaniFitTitle";
 export const Home = () => {
   //___________________________________________________ Variables
 
-  const [coaches, setCoaches] = useState(truc);
+  const coaches = truc;
   const [filteredCoaches, setFilteredCoaches] = useState(coaches);
+  const [isSearching, setIsSearching] = useState(false);
 
   //___________________________________________________ Functions
 
@@ -49,8 +50,18 @@ export const Home = () => {
           <i>en un battement de jambe !</i>
         </span>
       </p>
-      <Searchbar coaches={coaches} setFilteredCoaches={setFilteredCoaches} />
-      <CoachFilter coaches={coaches} setFilteredCoaches={setFilteredCoaches} />
+      <Searchbar
+        coaches={coaches}
+        setFilteredCoaches={setFilteredCoaches}
+        isSearching={isSearching}
+        setIsSearching={setIsSearching}
+      />
+      {!isSearching && (
+        <CoachFilter
+          coaches={coaches}
+          setFilteredCoaches={setFilteredCoaches}
+        />
+      )}
       <div
         style={{
           display: "flex",
